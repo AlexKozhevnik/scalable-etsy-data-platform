@@ -47,7 +47,7 @@ This project is currently in development.
 
 ## 📬 Contact
 
-This project was created by **Alexander Kozhevnikov**. I am a data professional passionate about building robust data solutions that drive business decisions.
+This project was created by **Alexander Kozhevnikov**.
 
 Feel free to connect with me on LinkedIn:
 
