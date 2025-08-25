@@ -1,0 +1,20 @@
+SELECT
+  Order_ID order_id,
+  PARSE_DATE('%m/%d/%Y', Sale_Date) sale_date,
+  PARSE_DATE('%m/%d/%Y', Date_Shipped) ship_date,
+  Full_Name full_name,
+  Street_1 customer_street,
+  Ship_City customer_city,
+  IFNULL(Ship_State, 'unknown') customer_state,
+  Ship_Country customer_country,
+  Ship_Zipcode customer_zip,
+  Order_Type order_type, 
+  CAST(Order_Value as FLOAT64) order_value,
+  CAST(Discount_Amount as FLOAT64) discount,
+  CAST(Order_Total as FLOAT64) order_total,
+  CAST(Card_Processing_Fees as FLOAT64) card_processing_fees,
+  CAST(Order_Net as FLOAT64) order_net,
+  CAST(Number_of_Items as INT64) items_number,  
+  IFNULL(Coupon_Code, 'non') coupon_code,
+  IFNULL(Coupon_Details, 'non') coupon_details
+FROM {{source('etsy', 'etsy_orders_EtsySoldOrders2025')}}
